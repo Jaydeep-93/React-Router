@@ -1,7 +1,21 @@
+import { Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import Product from "./pages/Products";
+import MainHeader from "./Components/MainHeader";
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <MainHeader />
+      <main>
+        <Route path="/welcome">
+          <Welcome />
+        </Route>
+
+        <Route path="/products">
+          <Product />
+        </Route>
+      </main>
     </div>
   );
 }
